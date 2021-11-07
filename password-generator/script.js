@@ -1,9 +1,5 @@
 // Assignment code here
 
-var prompt = window.prompt("What year were you born in?");
-
-var promptTwo = window.prompt("What was your first street name?")
-
 function passcode () {
 
   var prompt = window.prompt("What year were you born in?");
