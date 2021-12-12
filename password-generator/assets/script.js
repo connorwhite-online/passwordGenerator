@@ -1,18 +1,20 @@
 // Assignment code here
-var length = function() {
-  var characterLength = window.prompt("Enter the length in characters of your desired password.")
+var length = function() { 
+  var characterLength = window.prompt("Enter the length in characters of your desired password.");
+    console.log(characterLength);
 
   if (characterLength === "" || characterLength === null) {
-  window.alert("Please choose a length between 8 and 128 characters.");
-  return length();
+    window.alert("Please enter a numerical value between 8 and 128.")
+    return length();
   }
 
-  if (characterLength -= 7 || characterLength += 129) {
-    window.alert("Please choose a length between 8 and 128 characters.");
-    return length ();
+  if (characterLength <= 7 || characterLength >= 129) {
+    window.alert("Please enter a numerical value between 8 and 128.")
+    return length();
   }
 };
 
+length();
 
 
 // Get references to the #generate element
