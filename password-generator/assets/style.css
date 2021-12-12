@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: "Sporting Grotesque Regular", sans-serif;
-  background-color: blanchedalmond;
+  background-color: rgb(253, 238, 215);
 }
 
 @font-face {
@@ -25,10 +25,17 @@ body {
   font-family: "Sporting Grotesque Regular";
   src: url(fonts/Sporting_Grotesque-Regular_web.woff2);
 }
+@font-face {
+  font-family: "VG5000 Regular";
+  src: url(fonts/VG5000-Regular_web.woff2);
+}
 
 h1 {
   font-family: "Sporting Grotesque Bold";
   font-size: 5vw;
+}
+h2 {
+  font-size: 3vw;
 }
 
 .wrapper {
@@ -40,7 +47,6 @@ h1 {
 header {
   text-align: center;
   padding: 10px;
-  padding-top: 0px;
   color: hsl(0, 100%, 67%);
 }
 
@@ -70,6 +76,7 @@ header {
 
 .card-footer {
   text-align: center;
+  justify-content: center;
 }
 
 .card-footer::before {
@@ -86,15 +93,22 @@ header {
   clear: both;
 }
 
-.btn {
+div.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button#generate {
   border: none;
+  border-radius: 25px;
   background-color: hsl(0, 100%, 67%);
-  font-family: "Sporting Grotesque Regular", sans-serif;
-  font-size: 4vw;
+  color: white;
+  font-family: "VG5000 Regular", sans-serif;
   cursor: pointer;
   text-align: center;
-  display: flex;
-  align-content: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 /* .btn {
@@ -142,16 +156,24 @@ button[disabled] {
 }
 
 form {
-  display: grid;
-  grid-template-columns: auto auto;
-  text-align: justify;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
   padding: 20px 50px 10px;
+  color: rgb(96, 95, 104);
+  font-family: "VG5000 Regular", sans-serif;
+  font-size: 2vw;
 }
 input {
-  margin-bottom: 15px;
+  max-width: 75px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
-@media (max-width: 690px) {
+@media (min-width: 501px) {
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
@@ -161,11 +183,18 @@ input {
   #password {
     font-size: 1rem;
   }
+
+  form {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
+  }
+  form {
+    font-size: 0.75rem;
   }
 }
 
