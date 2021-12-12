@@ -25,25 +25,19 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <div class="filter">
-            <label for=""></label>
-            <input title="Character Length" type="number" id="length"/>
-          </div>
-          <div class="filter"></div>
-            <input type="checkbox" id="lowercase"/>
-          </div>
-          <div class="filter">
-            <input type="checkbox" id="uppercase"/>
-          </div>
-          <div class="filter"></div>
-            <input type="checkbox" id="numerical"/>
-          </div>
-          <div class="filter"></div>
-            <input type="checkbox" id="special"/>
-          </div>
-        </div>
+          <form id="criteria">
+            <label for="length">Character Length</label>
+            <input type="number" placeholder="8" name="length" id="length" min="8" max="128"/>
+            <label for="lowercase">Lowercase</label>
+            <input type="checkbox" name="lowercase" id="lowercase"/>
+            <label for="uppercase">Uppercase</label>
+            <input type="checkbox" name="uppercase" id="uppercase"/>
+            <label for="numerical">Numerical</label>
+            <input type="checkbox" name="numerical" id="numerical"/>
+            <label for="special">Special</label>
+            <input type="checkbox" name="special" id="special"/>
+          </form>
           <button id="generate" class="btn">Generate Password</button>
-        </div>
         </div>
       </div>
     </div>
