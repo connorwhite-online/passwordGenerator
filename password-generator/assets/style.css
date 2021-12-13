@@ -93,12 +93,6 @@ header {
   clear: both;
 }
 
-div.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 button#generate {
   border: none;
   border-radius: 25px;
@@ -109,6 +103,7 @@ button#generate {
   text-align: center;
   justify-content: center;
   padding: 10px;
+  margin-top: 50px;
 }
 
 /* .btn {
