@@ -7,17 +7,17 @@ const symbols = "=+-_)(*&^%$#@!";
 // Add constants for DOM ID selectors
 const passwordText = document.getElementById("password");
 const length = document.getElementById("length");
-const incUpper = document.getElementById("uppercase");
-const incNumbers = document.getElementById("numbers");
-const incSymbols = document.getElementById("symbols");
+const includeUpper = document.getElementById("uppercase");
+const includeNumbers = document.getElementById("numbers");
+const includeSymbols = document.getElementById("symbols");
 const generateButton = document.getElementById("generate");
 
-// Event added to button and checkbox input values read. Generate string and append it to input value
+// Event added to button and checkbox input values read and added to lowercase set. Generate string and append it to input value
 generateButton.addEventListener("click", () => {
   let characters = lowercase;
-  incUpper.checked ? (characters += uppercase) : "";
-  incNumbers.checked ? (characters += numbers) : "";
-  incSymbols.checked ? (characters += symbols) : "";
+  includeUpper.checked ? (characters += uppercase) : "";
+  includeNumbers.checked ? (characters += numbers) : "";
+  includeSymbols.checked ? (characters += symbols) : "";
   passwordText.value = generatePassword(length.value, characters);
 });
 
