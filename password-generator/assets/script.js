@@ -12,7 +12,16 @@ const incNumbers = document.getElementById("numbers");
 const incSymbols = document.getElementById("symbols");
 const generateBtn = document.getElementById("generate");
 
-
+// Return an indexed character and round the randomized number to an integer and multiply it by the # input. 
+const generatePassword = (length, characters) => {
+  let password = "";
+  for (let i = 0; i < length; i++) {
+    password += characters.charAt(
+      Math.floor(Math.random() * characters.length)
+    );
+  }
+  return password;
+};
 
 // define element selectors
 const length = document.getElementById('length')
