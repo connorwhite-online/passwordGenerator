@@ -8,10 +8,10 @@ const form = document.getElementById('password-form')
 const passwordText = document.getElementById('password')
 
 // define charCode arrays
-const lowerCodes = arrayLowToHigh(97, 122)
-const upperCodes = arrayLowToHigh(65, 90)
-const numericalCodes = arrayLowToHigh(48, 57)
-const symbolCodes = arrayLowToHigh(33,47).concat(
+const LOWER_CHAR_CODES = arrayLowToHigh(97, 122)
+const UPPER_CHAR_CODES = arrayLowToHigh(65, 90)
+const NUMBER_CHAR_CODES = arrayLowToHigh(48, 57)
+const SYMBOL_CHAR_CODES = arrayLowToHigh(33,47).concat(
   arrayLowToHigh(58, 64)
 ).concat(
   arrayLowToHigh(91, 96)
@@ -27,15 +27,16 @@ form.addEventListener('submit', e => {
   const includeNumbers = document.getElementById('numerical').checked
   const includeSymbols = document.getElementById('symbols').checked
   const password = generatePassword(length, uppercase, numerical, symbols)
-  passwordText.innerHTML = password
+  passwordText.innerText = password
+  document.getElementById('password').innerText = password
 })
 
-// generate password based on checked criteria
+// generate password based on ASCII character codes criteria
 function generatePassword(length, lowercase, uppercase, numerical, symbols) {
-  let charCodes = lowerCodes
-  if (upperCodes) charCodes = charCodes.concat(upperCodes)
-  if (numericalCodes) charCodes = charCodes.concat(numericalCodes)
-  if (symbolCodes) charCodes = charCodes.concat(symbolCodes)
+  let charCodes = LOWER_CHAR_CODES
+  if (UPPER_CHAR_CODES) charCodes = charCodes.concat(UPPER_CHAR_CODES)
+  if (NUMBER_CHAR_CODES) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
+  if (SYMBOL_CHAR_CODES) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
 
   const passwordCharacters = []
   for (let i = 0; i < length; i++) {
@@ -52,14 +53,6 @@ function arrayLowToHigh(low, high) {
     array.push(i)
   }
   return array
-}
-
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-  console.log(password)
 }
 
 

@@ -132,6 +132,18 @@ button[disabled] {
   float: right;
 }
 
+#password-input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#submit-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -162,7 +174,7 @@ form {
   font-family: "VG5000 Regular", sans-serif;
   font-size: 2vw;
 }
-input {
+input#length {
   max-width: 75px;
   cursor: pointer;
   margin-right: 10px;

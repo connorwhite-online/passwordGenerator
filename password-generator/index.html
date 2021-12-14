@@ -17,25 +17,28 @@
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
-          <h3 id="password">Password Here</h3>
-        </div>
-        <div class="card-footer">
-          <form id="password-form">
-            <label for="length">Character Length</label>
-            <input type="number" name="length" id="length" min="8" max="128"/>
-            <!-- <label for="lowercase">Lowercase</label>
-            <input type="checkbox" name="lowercase" id="lowercase"/> -->
-            <label for="uppercase">Uppercase</label>
-            <input type="checkbox" name="uppercase" id="uppercase"/>
-            <label for="numerical">Numerical</label>
-            <input type="checkbox" name="numerical" id="numerical"/>
-            <label for="symbols">Symbols</label>
-            <input type="checkbox" name="symbols" id="symbols"/>
+          <div id="password-input">
+            <input type="text" id="password" placeholder="Password Appears Here"/>
+          </div>
+          <div class="card-footer">
+            <form id="password-form">
+              <label for="length">Character Length</label>
+              <input type="number" name="length" id="length" value="8" min="8" max="128"/>
+              <label for="uppercase">Uppercase</label>
+              <input type="checkbox" name="uppercase" id="uppercase"/>
+              <label for="numerical">Numbers</label>
+              <input type="checkbox" name="numbers" id="numbers"/>
+              <label for="symbols">Symbols</label>
+              <input type="checkbox" name="symbols" id="symbols"/>
+            </form>
+          </div>
+          <div id="submit-button">
             <button type="submit" id="generate" class="btn">Generate Password</button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
-    <script src="assets/script.js"></script>
+    <!-- <script src="assets/script.js"></script> -->
+    <script src="assets/js.js"></script>
   </body>
 </html>
