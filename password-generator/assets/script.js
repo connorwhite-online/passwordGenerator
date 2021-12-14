@@ -1,3 +1,9 @@
+const lowercase = "abcdefghijklmnopqrstuvwxyz";
+const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const numbers = "0123456789";
+const symbols = "=+-_)(*&^%$#@!";
+
+
 // define element selectors
 const length = document.getElementById('length')
 // const lowercase = document.getElementById('lowercase')

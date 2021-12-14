@@ -1,7 +1,7 @@
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const numbers = "0123456789";
-const symbols = "!@#$%^&*_-+=";
+const symbols = "=+-_)(*&^%$#@!";
 
 const passwordTxt = document.getElementById("password");
 const length = document.getElementById("length");
