@@ -5,12 +5,12 @@ const numbers = "0123456789";
 const symbols = "=+-_)(*&^%$#@!";
 
 // Add constants for DOM ID selectors
-const passwordText = document.getElementById("password");
 const length = document.getElementById("length");
 const includeUpper = document.getElementById("uppercase");
-const includeNumbers = document.getElementById("numbers");
+const includeNumbers = document.getElementById("numerical");
 const includeSymbols = document.getElementById("symbols");
 const generateButton = document.getElementById("generate");
+const passwordText = document.getElementById("password");
 
 // Event added to button and checkbox input values read and added to lowercase set. Generate string and append it to input value
 generateButton.addEventListener("click", () => {
